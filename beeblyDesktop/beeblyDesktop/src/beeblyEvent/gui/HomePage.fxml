@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="854.0" style="-fx-background-color: #3f5e6d;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beeblyEvent.gui.HomePageController">
+    <stylesheets>
+        <URL value="@../../beeblyEvent/gui/homepage.css" />
+    </stylesheets>
+   <children>
+      <Button fx:id="f" layoutX="61.0" layoutY="116.0" mnemonicParsing="false" onAction="#changeEvent" prefHeight="293.0" prefWidth="309.0" style="-fx-background-color: #cda77a;" text="Evenement" textFill="#ffff15">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button layoutX="629.0" layoutY="116.0" mnemonicParsing="false" onAction="#changeTicket" prefHeight="293.0" prefWidth="325.0" style="-fx-background-color: #cda77a;" text="Ticket" textFill="#750a0a">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="goSat" layoutX="296.0" layoutY="459.0" mnemonicParsing="false" onAction="#goSatRedirction" prefHeight="45.0" prefWidth="435.0" style="-fx-background-color: #ff0808;" text="Statistique" textFill="#effa02" />
+      <ImageView fitHeight="286.0" fitWidth="316.0" layoutX="386.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Ressources/Docs/Image/Qr.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="home" layoutX="74.0" layoutY="32.0" mnemonicParsing="false" onAction="#goSatMenu" text="Home" />
+   </children>
+</AnchorPane>

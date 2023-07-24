@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1500.0" stylesheets="@../shared/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beeblyEchange.gui.AfficherListeClotureAchatController">
+    <children>
+        <Rectangle id="btn" arcHeight="5.0" arcWidth="5.0" fill="#3f5e6d" height="607.0" layoutX="-1.0" layoutY="-2.0" stroke="#2f3459" strokeType="INSIDE" width="1501.0" />
+        <TableView fx:id="table" layoutX="24.0" layoutY="144.0" onMouseClicked="#afficher" prefHeight="429.0" prefWidth="901.0">
+            <columns>
+                <TableColumn fx:id="titre" prefWidth="180.0" resizable="false" text="Titre livre" />
+                <TableColumn fx:id="edition" minWidth="-1.0" prefWidth="180.0" resizable="false" text="Edition" />
+                <TableColumn fx:id="point" prefWidth="180.0" resizable="false" text="Point achat finale" />
+                <TableColumn fx:id="etatCloture" prefWidth="180.0" resizable="false" text="Etat cloture" />
+                <TableColumn fx:id="etatLivre" prefWidth="180.0" resizable="false" text="Etat livre" />
+            </columns>
+        </TableView>
+        <Pane fx:id="detail" layoutX="992.0" layoutY="132.0" prefHeight="444.0" prefWidth="466.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="48.0" layoutY="45.0" stroke="#3d291d" strokeType="INSIDE" width="1501.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="97.0" layoutX="1201.0" layoutY="27.0" stroke="#f4b707" strokeType="INSIDE" width="216.0" />
+        <Text fill="#2f3459" layoutX="50.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des clotures achats.">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="57.0" fitWidth="181.0" layoutX="1217.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../shared/logo.png" />
+            </image>
+        </ImageView>
+    </children>
+</Pane>

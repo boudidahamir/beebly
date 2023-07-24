@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="542.0" prefWidth="538.0" style="-fx-background-color: #3f5e6d;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beeblyEvent.gui.AjouterTicketController">
+    <stylesheets>
+        <URL value="@../../beeblyEvent/gui/ajouterticket.css" />
+    </stylesheets>
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f5e6d" height="542.0" layoutX="-1.0" stroke="#2f3459" strokeType="INSIDE" width="538.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="55.0" layoutY="29.0" stroke="#3d291d" strokeType="INSIDE" width="538.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="106.0" layoutX="364.0" layoutY="14.0" stroke="#f4b707" strokeType="INSIDE" width="155.0" />
+      <ImageView fitHeight="42.0" fitWidth="126.0" layoutX="385.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/gestion_reclamation/src/Assets/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="24.0" layoutY="37.0" text="Ajouter Ticket" textFill="#2f3459">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_type" layoutX="70.0" layoutY="178.0" prefHeight="40.0" prefWidth="239.0" />
+      <TextField fx:id="tf_prix" layoutX="70.0" layoutY="271.0" prefHeight="40.0" prefWidth="239.0" />
+      <Button fx:id="add_button" layoutX="300.0" layoutY="370.0" mnemonicParsing="false" onAction="#ajouter_ticket" prefHeight="47.0" prefWidth="120.0" style="-fx-background-color: #d7a914;" text="Ajouter" textFill="#070707" />
+      <Label layoutX="70.0" layoutY="142.0" prefHeight="26.0" prefWidth="50.0" text="type" textFill="#d0b623">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="233.0" prefHeight="26.0" prefWidth="50.0" text="prix" textFill="#d0b623">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="names" layoutX="70.0" layoutY="367.0" prefHeight="27.0" prefWidth="155.0" />
+      <Label layoutX="70.0" layoutY="329.0" prefHeight="27.0" prefWidth="135.0" text="id_evenement" textFill="#d0b623">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#retoure_action" prefHeight="27.0" prefWidth="98.0" style="-fx-background-color: #d7a914;" text="Retour" textFill="#070707" />
+   </children>
+</AnchorPane>

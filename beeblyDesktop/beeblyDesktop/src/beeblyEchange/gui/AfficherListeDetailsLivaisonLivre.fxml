@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1500.0" stylesheets="@../shared/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beeblyEchange.gui.AfficherListeDetailsLivaisonLivreController">
+    <children>
+        <Rectangle id="btn" arcHeight="5.0" arcWidth="5.0" fill="#3f5e6d" height="607.0" layoutX="3.0" layoutY="-2.0" stroke="#2f3459" strokeType="INSIDE" width="1501.0" />
+        <TableView fx:id="table" layoutX="32.0" layoutY="142.0" onMouseClicked="#afficher" prefHeight="428.0" prefWidth="874.0">
+            <columns>
+            <TableColumn fx:id="nomClient" prefWidth="188.79995346069336" text="Nom client" />
+                <TableColumn fx:id="titre" prefWidth="196.80006408691406" text="Titre livre" />
+                <TableColumn fx:id="edition" prefWidth="101.59996032714844" text="Edition" />
+                <TableColumn fx:id="date" prefWidth="116.00006103515625" text="date Proposition" />
+                <TableColumn fx:id="point" prefWidth="125.5999755859375" text="point proposé" />
+            <TableColumn fx:id="etatLivraison" prefWidth="142.79998779296875" text="Etat livraison" />
+            </columns>
+        </TableView>
+        <Pane fx:id="detail" layoutX="936.0" layoutY="95.0" prefHeight="444.0" prefWidth="466.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="48.0" layoutY="45.0" stroke="#3d291d" strokeType="INSIDE" width="1506.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="97.0" layoutX="1201.0" layoutY="27.0" stroke="#f4b707" strokeType="INSIDE" width="216.0" />
+        <Text fill="#2f3459" layoutX="50.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des estimations acceptés">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="57.0" fitWidth="181.0" layoutX="1217.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../shared/logo.png" />
+            </image>
+        </ImageView>
+      <TextField fx:id="recherche" layoutX="32.0" layoutY="107.0" onKeyReleased="#refresh" prefHeight="25.0" prefWidth="216.0" />
+      <RadioButton fx:id="accepte" layoutX="406.0" layoutY="107.0" mnemonicParsing="false" onAction="#refresh" text="Acceptée">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="data" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="enAttente" layoutX="653.0" layoutY="107.0" mnemonicParsing="false" onAction="#refresh" text="En_attente" toggleGroup="$data">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="refuse" layoutX="538.0" layoutY="107.0" mnemonicParsing="false" onAction="#refresh" text="Refusé" toggleGroup="$data">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="toute" layoutX="787.0" layoutY="107.0" mnemonicParsing="false" onAction="#refresh" selected="true" text="Toute la liste" toggleGroup="$data">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+    </children>
+</Pane>

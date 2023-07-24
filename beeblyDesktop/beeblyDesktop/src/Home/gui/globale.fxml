@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<Pane prefHeight="400.0" prefWidth="600.0" stylesheets="@globale.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.gui.GlobalControlleur">
+   <children>
+      <Rectangle id="btn" arcHeight="5.0" arcWidth="5.0" fill="#3f5e6d" height="607.0" layoutX="-2.0" stroke="#2f3459" strokeType="INSIDE" width="1501.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="97.0" layoutX="1221.0" layoutY="47.0" stroke="#f4b707" strokeType="INSIDE" width="216.0" />
+      <ImageView fitHeight="57.0" fitWidth="181.0" layoutX="1237.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../beebly-gestion-user/beebly-gestion-user/src/beeblyTrade/vue/shared/logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="button" layoutX="181.0" layoutY="72.0" mnemonicParsing="false" onAction="#gestionBlog" prefHeight="97.0" prefWidth="154.0" text="Gestion du blog" />
+      <Button fx:id="button2" layoutX="713.0" layoutY="72.0" mnemonicParsing="false" onAction="#gestionReclamation" prefHeight="97.0" prefWidth="154.0" text="Gestion des réclamtions" />
+
+      <Button fx:id="button3" layoutX="454.0" layoutY="392.0" mnemonicParsing="false" onAction="#gestionUtilisateur" prefHeight="97.0" prefWidth="154.0" text="Gestion des utilisateurs" />
+
+
+   </children>
+</Pane>

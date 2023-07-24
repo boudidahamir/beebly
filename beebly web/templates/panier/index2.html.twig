@@ -1,0 +1,48 @@
+
+    <div class="bg-light p-3">
+        <h1 align="center" style="color:rgb(12, 3, 74)" ><span style="font-size: 40pt;">  Votre Commande  </span></h1>
+
+    </div>
+
+
+    {% if items | length >0 %}
+    <table class="table" align="center">
+        <thead>
+        <tr>
+            <th style="padding: 30px;"><h1 style="color:rgb(12, 3, 74)">Livre</h1></th>
+              <th style="padding: 30px;"><h1 style="color:rgb(12, 3, 74)">Prix</h1></th>
+              <th style="padding: 30px;"><h1 style="color:rgb(12, 3, 74)">Quantité</h1></th>
+              <th style="padding: 30px;"><h1 style="color:rgb(12, 3, 74)">Total</h1></th>
+              <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in items %}
+        <tr>
+            <td style="padding: 30px;"><span style="font-size: 25pt;"><b>{{ item.livre.titre }}</b></span></td>
+            <td style="padding: 30px;"><span style="font-size: 25pt;">{{ item.livre.prix }}</span></td>
+            <td style="padding: 30px;"><span style="font-size: 25pt;">{{ item.quantity }}</span></td>
+            <td style="padding: 30px;"><span style="font-size: 25pt;">{{ item.livre.prix * item.quantity }}</span></td>
+
+            <td>
+                <a href="{{ path('panier_remove',{'id': item.livre.id}) }}" class="btn btn-danger btn-sm">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+        <tfoot>
+        <tr>
+             <td colspan="3" class="text-left"><span style="font-size: 25pt;"><h2 style="color:rgb(12, 3, 74)">Votre commande vaut:</h2></span></td>
+            <td><span style="font-size: 25pt;"><h3 style="color:rgb(12, 3, 74)">{{ total }} {{"DT"}} </h3></span></td>
+             <td></td>
+        </tr>
+        </tfoot>
+    </table>
+
+
+
+    {% else %}
+    <p>Votre panier est vide !</p>
+    {% endif %}

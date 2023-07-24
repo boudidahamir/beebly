@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="542.0" prefWidth="538.0" style="-fx-background-color: 3f5e6d;" stylesheets="@../Assets/Styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beebly.gui.AjouterLivreController">
+   <children>
+      <Rectangle id="btn" arcHeight="5.0" arcWidth="5.0" fill="#3f5e6d" height="660.0" layoutX="-174.0" stroke="#2f3459" strokeType="INSIDE" width="1365.0" />
+      <TextField fx:id="titre_field" layoutX="42.0" layoutY="139.0" prefHeight="34.0" prefWidth="139.0" />
+      <Label id="label_form" layoutX="71.0" layoutY="114.0" text="Titre" textFill="#faf8f8" />
+      <Label id="label_form" layoutX="220.0" layoutY="189.0" text="Description" textFill="WHITE" />
+      <TextArea fx:id="description_field" layoutX="134.0" layoutY="207.0" prefHeight="113.0" prefWidth="266.0" />
+      <TextField fx:id="image_field" layoutX="136.0" layoutY="379.0" prefHeight="25.0" prefWidth="168.0" />
+      <Label id="label_form" layoutX="147.0" layoutY="344.0" text="Image" />
+      <Label layoutX="197.0" layoutY="344.0" text="( optionelle ) " textFill="#f0ffb2" />
+      <Button id="add_button" fx:id="add_button" layoutX="20.0" layoutY="440.0" mnemonicParsing="false" onAction="#add_livre" prefHeight="34.0" prefWidth="150.0" stylesheets="@../Assets/Styles.css" text="Enregister ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button id="search_button" fx:id="browse_button" layoutX="315.0" layoutY="379.0" mnemonicParsing="false" onAction="#browse_images" prefHeight="24.0" prefWidth="99.0" stylesheets="@../Assets/Styles.css" text="Choisir" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="48.0" layoutY="23.0" stroke="#3d291d" strokeType="INSIDE" width="553.0" />
+      <Text fill="#2f3459" layoutX="20.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un livre">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="81.0" layoutX="382.0" layoutY="15.0" stroke="#f4b707" strokeType="INSIDE" width="150.0" />
+      <ImageView fitHeight="48.0" fitWidth="119.0" layoutX="397.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/logo.png" />
+         </image>
+      </ImageView>
+      <Label id="label_form" layoutX="388.0" layoutY="114.0" text="Categorie" textFill="#faf8f8" />
+      <TextField fx:id="categorie_field" layoutX="365.0" layoutY="139.0" prefHeight="34.0" prefWidth="139.0" />
+      <Button id="add_button" fx:id="update_button" layoutX="381.0" layoutY="440.0" mnemonicParsing="false" onAction="#update_livre" prefHeight="34.0" prefWidth="150.0" stylesheets="@../Assets/Styles.css" text="Modifier">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <TableView fx:id="table" layoutX="575.0" layoutY="104.0" onMouseClicked="#afficher" prefHeight="514.0" prefWidth="574.0">
+         <columns>
+            <TableColumn fx:id="titre" prefWidth="99.20001220703125" text="Titre livre" />
+            <TableColumn fx:id="categorie" prefWidth="121.5999755859375" text="Categorie" />
+            <TableColumn fx:id="date" prefWidth="139.9998779296875" text="Date Publication" />
+            <TableColumn fx:id="dess" prefWidth="211.99997558593748" text="Description" />
+         </columns>
+      </TableView>
+      <Button fx:id="RedBtnn" layoutX="222.0" layoutY="504.0" mnemonicParsing="false" onAction="#RListe" prefHeight="34.0" prefWidth="99.0" text="Affichage" />
+      <Button fx:id="home" layoutX="241.0" layoutY="102.0" mnemonicParsing="false" onAction="#goSatMenu" text="Home" />
+   </children>
+</AnchorPane>

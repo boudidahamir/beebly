@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="407.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/8.0.301" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beeblyUser.gui.SignInController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="66.0" layoutY="74.0" prefHeight="18.0" prefWidth="44.0" text="nom" />
+            <Label layoutX="67.0" layoutY="100.0" text="prenom" />
+            <Label layoutX="67.0" layoutY="178.0" text="adresse mail" />
+            <Label layoutX="68.0" layoutY="204.0" text="mot de passe" />
+            <Label layoutX="68.0" layoutY="231.0" text="confirmer mot de passe" />
+            <Label layoutX="68.0" layoutY="126.0" text="adresse" />
+            <Label layoutX="67.0" layoutY="152.0" text="telephone" />
+            <PasswordField fx:id="txtmdp" layoutX="215.0" layoutY="200.0" />
+            <PasswordField fx:id="txtmdpconf" layoutX="216.0" layoutY="227.0" />
+            <Button fx:id="signin" layoutX="469.0" layoutY="320.0" mnemonicParsing="false" onAction="#addUser" text="sign in" />
+            <Button fx:id="cancel" layoutX="397.0" layoutY="320.0" mnemonicParsing="false" onAction="#cancel" text="cancel" />
+            <TextField fx:id="txtadressemail" layoutX="215.0" layoutY="174.0" />
+            <TextField fx:id="txttel" layoutX="215.0" layoutY="148.0" />
+            <TextField fx:id="txtadresse" layoutX="215.0" layoutY="122.0" />
+            <TextField fx:id="txtprenom" layoutX="215.0" layoutY="96.0" />
+            <TextField fx:id="txtnom" layoutX="215.0" layoutY="70.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

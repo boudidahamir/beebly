@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="barchart" prefHeight="661.0" prefWidth="950.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beeblyEvent.gui.StatistiqueFXMLController">
+    <stylesheets>
+        <URL value="@../../beeblyEvent/gui/statistiquefxml.css" />
+    </stylesheets>
+   <children>
+      <PieChart fx:id="pieChart" layoutX="154.0" layoutY="78.0" prefHeight="450.0" prefWidth="684.0" />
+      <Button fx:id="btn_retour" layoutX="26.0" layoutY="24.0" mnemonicParsing="false" onAction="#redirectAction" style="-fx-background-color: #fffb00;" text="Retour" />
+   </children>
+</AnchorPane>

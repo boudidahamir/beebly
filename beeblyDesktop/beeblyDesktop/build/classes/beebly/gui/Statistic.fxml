@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="682.0" prefWidth="877.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="beebly.gui.StatisticController">
+   <children>
+      <VBox fx:id="box" layoutX="78.0" layoutY="204.0" prefHeight="200.0" prefWidth="100.0" />
+      <PieChart fx:id="pieChart" layoutX="347.0" layoutY="104.0" />
+   </children>
+</AnchorPane>

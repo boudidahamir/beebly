@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.301" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beeblyUser.gui.AfficherUserController">
+   <children>
+      <TableView id="clients" fx:id="tabuser" prefHeight="370.0" prefWidth="590.0">
+         <columns>
+            <TableColumn id="id" fx:id="id" prefWidth="75.0" text="id" visible="false" />
+            <TableColumn id="nom" fx:id="nom" prefWidth="75.0" text="nom" />
+            <TableColumn id="prenom" fx:id="prenom" prefWidth="75.0" text="prenom" />
+            <TableColumn id="email" fx:id="email" prefWidth="75.0" text="email" />
+            <TableColumn id="mdp" fx:id="mdp" prefWidth="75.0" text="mdp" visible="false" />
+            <TableColumn id="adresse" fx:id="adresse" prefWidth="75.0" text="adresse" />
+            <TableColumn id="tel" fx:id="tel" prefWidth="75.0" text="tel" />
+            <TableColumn id="type" fx:id="type" prefWidth="75.0" text="type" visible="false" />
+            <TableColumn id="soldepoint" fx:id="soldepoint" prefWidth="75.0" text="soldepoint" visible="false" />
+         </columns>
+      </TableView>
+      <Button layoutY="374.0" mnemonicParsing="false" onAction="#retour" text="retour" />
+      <TextField fx:id="recherche" layoutX="603.0" layoutY="38.0" onInputMethodTextChanged="#recherche" onKeyPressed="#recherche" />
+      <Label layoutX="603.0" layoutY="14.0" text="recherche" />
+   </children>
+</AnchorPane>

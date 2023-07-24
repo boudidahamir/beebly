@@ -1,0 +1,39 @@
+{% extends 'templateFront.html.twig' %}
+
+{% block title %}Le livre{% endblock %}
+
+{% block body %}
+    <h1>Le livre:</h1>
+
+    <div class="card" >
+        <table class="table">
+        <tbody>
+
+            <tr>
+                <h3 class="card-title">{{ livre.titre }}</h3>
+            </tr>
+            <tr>
+                <p class="card-text">{{ livre.DescriptionEtatLivre }}</p>
+            </tr>
+            <tr>
+                <p class="card-text">{{ livre.categorie }}</p>
+            </tr>
+            <tr>
+                <p class="card-text">{{ livre.prix }} Dinars </p>
+            </tr>
+            <tr>
+            <img src= {{ asset('uploads/'~ livre.image )}} width="100%" />
+            </tr>
+            <tr>
+            <a href="{{ path('app_catalogue_index') }}" class="btn btn-primary">Retour au catalogue</a>
+            </tr>
+           {#  <button id="ajouter-favori" class="btn btn-primary">Ajouter aux favoris</button> #}
+
+        </tbody>
+        </table>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1500.0" stylesheets="@../shared/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beebly.gui.AfficherListeCommandeController">
+    <children>
+      <Rectangle id="btn" arcHeight="5.0" arcWidth="5.0" fill="#3f5e6d" height="607.0" layoutX="-1.0" layoutY="-2.0" stroke="#2f3459" strokeType="INSIDE" width="1501.0" />
+        <TableView fx:id="table" layoutX="42.0" layoutY="141.0" onMouseClicked="#afficher" prefHeight="428.0" prefWidth="874.0">
+            <columns>
+                <TableColumn fx:id="idClient" editable="false" prefWidth="267.2000045776367" text="idClient" />
+                <TableColumn fx:id="Adresse" editable="false" prefWidth="329.6000061035156" text="Adresse Livraison" />
+            <TableColumn fx:id="prix" editable="false" prefWidth="276.0" text="Prix" />
+            </columns>
+        </TableView>
+        <Pane fx:id="detail" layoutX="936.0" layoutY="95.0" prefHeight="444.0" prefWidth="466.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="48.0" layoutY="45.0" stroke="#3d291d" strokeType="INSIDE" width="1506.0" />
+      <Text fill="#2f3459" layoutX="319.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des commandes" textAlignment="CENTER" wrappingWidth="320.79718017578125">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <TextField fx:id="recherche" layoutX="371.0" layoutY="100.0" onKeyReleased="#refresh" prefHeight="36.0" prefWidth="216.0" />
+    </children>
+</Pane>

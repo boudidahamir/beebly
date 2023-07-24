@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #3f5e6d;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beeblyEvent.gui.TicketController">
+    <stylesheets>
+        <URL value="@../../beeblyEvent/gui/ticket.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="37.0" layoutY="67.0" prefHeight="175.0" prefWidth="156.0" spacing="15.0">
+         <children>
+            <Label style="visibility: hidden;" text="ID" textFill="#eba80d">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label text="TYPE" textFill="#eba80d">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label text="PRIX" textFill="#eba80d">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label text="ID_EVENEMENT" textFill="#eba80d">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="212.0" layoutY="67.0" prefHeight="200.0" prefWidth="200.0" spacing="15.0">
+         <children>
+            <TextField fx:id="tf_id" prefHeight="26.0" prefWidth="260.0" style="visibility: hidden;" />
+            <TextField fx:id="tf_type" />
+            <TextField fx:id="tf_prix" />
+            <TextField fx:id="tf_id_evenement" />
+         </children>
+      </VBox>
+      <TableView fx:id="tv_ticket" layoutX="239.0" layoutY="316.0" onMouseClicked="#MouseClicked" prefHeight="306.0" prefWidth="454.0">
+        <columns>
+          <TableColumn fx:id="id" minWidth="0.0" prefWidth="0.0" style="-fx-color: #cda77a;" text="ID" />
+          <TableColumn fx:id="type" prefWidth="202.0" style="-fx-color: #cda77a;" text="TYPE" />
+            <TableColumn fx:id="prix" prefWidth="256.0" style="-fx-color: #cda77a;" text="PRIX" />
+            <TableColumn fx:id="id_evenement" prefWidth="140.0" style="-fx-color: #cda77a;" text="ID_EVENEMENT" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_update" layoutX="476.0" layoutY="137.0" mnemonicParsing="false" onAction="#updateTicket" prefHeight="36.0" prefWidth="122.0" style="-fx-background-color: #676b24;" text="update" textFill="#2df002" />
+      <Line endX="77.0" endY="70.0" layoutX="521.0" layoutY="67.0" startX="-109.0" startY="42.0" />
+      <Line endX="78.5" endY="-34.0" layoutX="512.0" layoutY="207.0" startX="-100.0" startY="9.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8a9031" height="45.0" stroke="BLACK" strokeType="INSIDE" width="940.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#809732" height="200.0" layoutX="710.0" layoutY="-55.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Button layoutX="6.0" layoutY="5.0" mnemonicParsing="false" onAction="#retoure" prefHeight="36.0" prefWidth="122.0" style="-fx-background-color: #676b24;" text="Retour" textFill="#2df002" />
+      <Button layoutX="788.0" layoutY="14.0" mnemonicParsing="false" onAction="#aller_Add" prefHeight="36.0" prefWidth="122.0" style="-fx-background-color: #080707;" text="Ajout" textFill="WHITE" />
+   </children>
+</AnchorPane>

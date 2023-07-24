@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="gestion reclamation.jnlp">
+  <information>
+    <title>gestion reclamation</title>
+    <vendor>alaaz</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\commons-logging-1.2.1.1.jar" size="60686" download="eager" />
+    <jar href="lib\controlsfx-8.40.11.jar" size="985420" download="eager" />
+    <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\fontawesomefx-glyphsbrowser-all-1.0.jar" size="1662483" download="eager" />
+    <jar href="lib\fontbox-2.0.3.jar" size="1477680" download="eager" />
+    <jar href="lib\javafx-fxml-15.0.1.jar" size="302" download="eager" />
+    <jar href="lib\javax.mail.jar" size="659033" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="beebly.tests.GestionReclamation"  name="gestion reclamation" />
+  <update check="always"/>
+</jnlp>

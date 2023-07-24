@@ -1,0 +1,17 @@
+{% extends 'templateFront.html.twig' %}
+
+{% block title %}Mes favoris{% endblock %}
+
+{% block body %}
+    <h1>Mes favoris</h1>
+
+    {% if favoris is empty %}
+        <p>Vous n'avez aucun livre dans vos favoris.</p>
+    {% else %}
+        <ul>
+            {% for livre in favoris %}
+                <li>{{ livre.titre }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.301" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beeblyUser.gui.ProfileadminController">
+      <TextField fx:id="Pnom" editable="false" layoutX="137.0" layoutY="31.0" />
+      <TextField fx:id="pprenom" editable="false" layoutX="137.0" layoutY="65.0" />
+      <Label layoutX="22.0" layoutY="35.0" text="nom" />
+      <Label layoutX="20.0" layoutY="69.0" text="prenom" />
+      <Label layoutX="20.0" layoutY="103.0" text="email" />
+      <Label layoutX="21.0" layoutY="134.0" text="adresse" />
+      <Label layoutX="20.0" layoutY="166.0" text="telephone" />
+      <Label layoutX="20.0" layoutY="200.0" text="cin" />
+      <TextField fx:id="pemail" editable="false" layoutX="136.0" layoutY="99.0" />
+      <TextField fx:id="padresse" editable="false" layoutX="137.0" layoutY="130.0" />
+      <TextField fx:id="ptel" editable="false" layoutX="137.0" layoutY="162.0" />
+      <TextField fx:id="pcin" editable="false" layoutX="137.0" layoutY="196.0" />
+      <Button layoutX="300.0" layoutY="274.0" mnemonicParsing="false" onAction="#goUpdateCurrentuser" text="changer les donnes" />
+   <Button layoutX="235.0" layoutY="274.0" mnemonicParsing="false" onAction="#retour" text="retour" />
+   <Button layoutX="534.0" layoutY="361.0" mnemonicParsing="false" onAction="#deleteownacc" text="supprimer mon compte" />
+   <Button layoutX="435.0" layoutY="361.0" mnemonicParsing="false" onAction="#deconnecter" text="deconnecter" />
+</AnchorPane>

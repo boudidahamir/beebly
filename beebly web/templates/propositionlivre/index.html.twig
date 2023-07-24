@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Propositionlivre index{% endblock %}
+
+{% block body %}
+
+    <a href="{{ path('app_propositionlivre_new') }}">Create new</a>
+
+    <h1>Propositionlivre index</h1>
+    <form id="filters">
+        <input type="text"  placeholder="Search..." name="search15">
+
+        <p>Filtrer</p>
+        <p><input type="radio" name="check" value="all" id="all" checked> <label for="all">Select all </label></p>
+        <p><input type="radio" name="check" value="not-treated" id="not-treated" > <label for="not-treated">Not-treated </label></p>
+        <p><input type="radio" name="check" value="treated" id="treated" > <label for="treated">Treated </label></p>
+    </form>
+
+
+    <div class="grix xs1 sm5 gutter-0 card">
+        <div class="col-xs1">
+
+        </div>
+        <div class="col-xs1 col-sm4" id="content">
+            {% include "propositionlivre/filtredContent.html.twig" %}
+        </div>
+    </div>
+
+    {% block js %}
+        <script src="{{ asset('js/filters.js') }}"></script>
+    {% endblock %}
+{% endblock %}

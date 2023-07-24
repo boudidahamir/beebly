@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="591.0" prefWidth="1516.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beeblyEchange.gui.CourbeController">
+    <children>
+        <Rectangle id="btn" arcHeight="5.0" arcWidth="5.0" fill="#3f5e6d" height="607.0" layoutX="9.0" layoutY="8.0" stroke="#2f3459" strokeType="INSIDE" width="1501.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="48.0" layoutX="10.0" layoutY="55.0" stroke="#3d291d" strokeType="INSIDE" width="1506.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="97.0" layoutX="1211.0" layoutY="37.0" stroke="#f4b707" strokeType="INSIDE" width="216.0" />
+        <Text fill="#2f3459" layoutX="60.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistiques">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="57.0" fitWidth="181.0" layoutX="1227.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../shared/logo.png" />
+            </image>
+        </ImageView>
+        <Button layoutX="486.0" layoutY="128.0" mnemonicParsing="false" onAction="#refresh" text="Afficher" />
+        <LineChart fx:id="chart" layoutX="83.0" layoutY="181.0" prefHeight="400.0" prefWidth="841.0">
+            <xAxis>
+                <CategoryAxis side="BOTTOM" tickLabelFill="#fafafa" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" tickLabelFill="WHITE" />
+            </yAxis>
+        </LineChart>
+        <ChoiceBox fx:id="annee" layoutX="306.0" layoutY="128.0" prefWidth="150.0" />
+        <ChoiceBox fx:id="mois" layoutX="128.0" layoutY="128.0" prefWidth="150.0" />
+        <Label layoutX="126.0" layoutY="159.0" text="Estimation par mois:" textFill="#cda77a">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="161.0" layoutX="971.0" layoutY="195.0" stroke="#f4b707" strokeType="INSIDE" width="200.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="161.0" layoutX="1242.0" layoutY="195.0" stroke="#f4b707" strokeType="INSIDE" width="200.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="161.0" layoutX="971.0" layoutY="395.0" stroke="#f4b707" strokeType="INSIDE" width="200.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cda77a" height="161.0" layoutX="1242.0" layoutY="395.0" stroke="#f4b707" strokeType="INSIDE" width="200.0" />
+        <Label layoutX="1001.0" layoutY="214.0" text="Proposition non traité">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="980.0" layoutY="228.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="1259.0" layoutY="207.0" text="Converstion entre l'estimation ">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="1247.0" layoutY="224.0" text="proposé et l'estimation acceptée. ">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="978.0" layoutY="404.0" text="Converstion entre estimation ">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="986.0" layoutY="423.0" text="livre et proposition cloturé.">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="1291.0" layoutY="404.0" text="Converstion entre">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="1252.0" layoutY="422.0" text="la proposition et l'estimation ">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="stat2" layoutX="1273.0" layoutY="266.0" prefHeight="20.0" prefWidth="137.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="stat4" layoutX="1296.0" layoutY="466.0" prefHeight="35.0" prefWidth="90.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="stat3" layoutX="994.0" layoutY="466.0" prefHeight="20.0" prefWidth="150.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="stat1" layoutX="1032.0" layoutY="258.0" prefHeight="20.0" prefWidth="78.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

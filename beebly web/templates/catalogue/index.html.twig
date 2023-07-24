@@ -1,0 +1,146 @@
+{% extends 'templateFront.html.twig' %}
+
+
+{% block title %}Livres{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <div class="latest-product__text">
+        <h4>Latest Edition</h4>
+        <br>
+    </div>
+    <form class="search-form d-flex align-items-center" method="POST" action="#">
+
+        <input type="text"  class="search-form d-flex align-items-center" id="search-input" placeholder="Rechercher..." value="{{ searchQuery }}">
+
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+    </form>
+
+    <br>
+    <br>
+
+    <div class="col-lg-4 col-md-3">
+        <div class="filter__option">
+            <span class="icon_grid-2x2"></span>
+            <span class="icon_ul"></span>
+        </div>
+    </div>
+
+    {% for livre in livres %}
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" >
+                        <img src="{{ asset('uploads/' ~ livre.image) }}" width="70%" alt="" />
+                        <div class="product__item__pic__hover">
+                            <a href="{{ path('panier_add', {'id': livre.id}) }}" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart"></i> Add to cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {#  <div class="txt-red">
+                        {% set isFavorite = false %}
+                        {% if is_granted("ROLE_USER") %}
+                            {% set currentUser = app.user %}
+                            {% for favori in livre.favoris %}
+                                {% if favori.id == currentUser.id %}
+                                    {% set isFavorite = true %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                        {% if isFavorite %}
+                            <a href="{{ path('livres_retrait_favoris', {id: livre.id}) }}" class="remove-favorite"><i class="fas fa-heart"></i></a>
+                        {% else %}
+                            <a href="{{ path('livres_ajout_favoris', {id: livre.id}) }}" class="add-favorite"><i class="far fa-heart"></i></a>
+                        {% endif %}
+                        {% if livre.favoris|length > 0 %}
+                            <br>
+                            <span><h5>{{ livre.favoris|length }} Favori</h5></span>
+                        {% endif %}
+                    </div> #}
+                    <div class="product__item__text">
+                        <h4><a href="{{ path('app_catalogue_show', {'id': livre.id}) }}">{{ livre.titre }}</a></h4>
+                        <h5>{{ livre.prix }} Dinars</h5>
+                        <br>
+                        <br>
+                    </div>
+
+                    {# {% if isFavorite %}
+                        {% set currentUser = app.user %}
+                        {% for favori in livre.favoris %}
+                            {% if favori.id == currentUser.id %}
+                                <a href="{{ path('livres_retrait_favoris', {id: livre.id}) }}" class="remove-favorite"> Retirer "{{livre.titre }}" des favoris </a>
+                                <br>
+                                <br>
+                                <br>
+                            {% endif %}
+                        {% endfor %}
+
+                    {% endif %}
+                    <script src="/public/js/remove.min.js"></script> #}
+        {#     <script>
+                const addButtons = document.querySelectorAll('.add-favorite');
+                const removeButtons = document.querySelectorAll('.remove-favorite');
+                addButtons.forEach(button => {
+                    button.addEventListener('click', event => {
+                        event.preventDefault();
+                        fetch(button.href)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Une erreur est survenue.');
+                                }
+                                button.classList.remove('add-favorite');
+                                button.classList.add('remove-favorite');
+                                button.href = button.href.replace('ajout', 'retrait');
+                            })
+                            .catch(error => {
+                                console.error(error);
+                            });
+                    });
+                });
+                removeButtons.forEach(button => {
+                    button.addEventListener('click', event => {
+                        event.preventDefault();
+                        fetch(button.href)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Une erreur est survenue.');
+                                }
+                                button.classList.remove('remove-favorite');
+                                button.classList.add('add-favorite');
+                                button.href = button.href.replace('retrait', 'ajout');
+                            })
+                            .catch(error => {
+                                console.error(error);
+                            });
+                    });
+                });
+            </script> #}
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+            {% else %}
+           <p>Aucun livre trouvé dans le catalogue</p>
+
+        {% endfor %}
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#search-input').on('input', function() {
+                var searchQuery = $(this).val();
+                window.location = '{{ path('app_catalogue_index') }}?q=' + searchQuery;
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.301" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beeblyUser.gui.AfficheruserbackController">
+   <children>
+      <TableView id="clients" fx:id="tabuser" layoutX="153.0" prefHeight="370.0" prefWidth="590.0">
+         <columns>
+            <TableColumn id="id" fx:id="id" prefWidth="75.0" text="id" visible="false" />
+            <TableColumn id="nom" fx:id="nom" prefWidth="75.0" text="nom" />
+            <TableColumn id="prenom" fx:id="prenom" prefWidth="75.0" text="prenom" />
+            <TableColumn id="email" fx:id="email" prefWidth="75.0" text="email" />
+            <TableColumn id="mdp" fx:id="mdp" prefWidth="75.0" text="mdp" visible="false" />
+            <TableColumn id="adresse" fx:id="adresse" prefWidth="75.0" text="adresse" />
+            <TableColumn id="tel" fx:id="tel" prefWidth="75.0" text="tel" />
+            <TableColumn id="type" fx:id="type" prefWidth="75.0" text="type" visible="false" />
+            <TableColumn id="soldepoint" fx:id="soldepoint" prefWidth="75.0" text="soldepoint" />
+            <TableColumn id="cin" fx:id="cin" prefWidth="75.0" text="cin" />
+         </columns>
+      </TableView>
+      <Button layoutX="548.0" layoutY="400.0" mnemonicParsing="false" onAction="#supprimeruser" text="supprimer" />
+      <Button layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="26.0" prefWidth="90.0" text="profile" />
+      <Button layoutX="14.0" layoutY="65.0" mnemonicParsing="false" onAction="#ajouteradmin" text="ajouter admin" />
+      <Button layoutX="15.0" layoutY="99.0" mnemonicParsing="false" onAction="#generateexcel" text="generer excel" />
+      <TextField fx:id="recherche" layoutY="177.0" onInputMethodTextChanged="#recherche" onKeyReleased="#recherche" />
+      <Label layoutX="33.0" layoutY="151.0" text="recherche" />
+   </children>
+</AnchorPane>

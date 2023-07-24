@@ -1,0 +1,19 @@
+{% extends 'templateFront.html.twig' %}
+
+
+
+{% block title %}Recherche{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <form action="{{ path('app_catalogue_recherche') }}" method="get">
+            {{ form_start(searchForm) }}
+            {{ form_row(searchForm.title) }}
+            {{ form_row(searchForm.Rechercher) }}
+            {{ form_end(searchForm) }}
+        </form>
+        {% block search %}
+            {{ parent() }}
+        {% endblock %}
+    </div>
+{% endblock %}
